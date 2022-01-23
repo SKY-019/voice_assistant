@@ -1,7 +1,7 @@
 import speech_recognition as sr
 from gtts import gTTS
 import os, signal
-import datetime
+from datetime import date
 import playsound
 import pyjokes
 import wikipedia
@@ -42,11 +42,6 @@ def openURL(url):
     speak(f"Openning{url}")
     openBrowser(url=url)
 
-# Get Date
-def getdate(text):
-    text = text.lower()
-    today = datetime.date.today()
-
 while True:
     text = get_audio().lower()
     # Open Website
@@ -62,10 +57,6 @@ while True:
         print(result)
         speak(result)
     # Close program
-    elif "close program" and "stop program" in text:
+    elif "stop program" in text:
         print("Closing Program")
         os._exit(0)
-    elif "What date is it" in text:
-        dateresult = datetime.datetime.now()
-        print(today)
-        speak(today) # NOT DONE
