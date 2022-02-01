@@ -1,24 +1,24 @@
-from __future__ import print_function
+from __future__ import print_function # Google Calender (Needs to be at the very Top of code)
 
-import datetime
-import os.path
+import datetime # Google Calender
+import os.path # Google Calender
+from google.auth.transport.requests import Request # Google Calender
+from google.oauth2.credentials import Credentials # Google Calender
+from google_auth_oauthlib.flow import InstalledAppFlow # Google Calender
 
-from google.auth.transport.requests import Request
-from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import InstalledAppFlow
-from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
+from googleapiclient.discovery import build # Google Calender
+from googleapiclient.errors import HttpError # Google Calender
+import speech_recognition as sr # Getting Microphone
+from gtts import gTTS # Google Text To speech
+import os, signal # Functions for the operating system
 
-import speech_recognition as sr
-from gtts import gTTS
-import os, signal
-from datetime import date
-import playsound
-import pyjokes
-import wikipedia
-import pyaudio
-import webbrowser
-import sys
+from datetime import date # Time Function
+import playsound # Play's audio file
+import wikipedia # Searching for Wikipedia
+import pyaudio # Play's also audio files
+import webbrowser # Open Webbrowser Function
+
+import sys # Standart ding
 
 # Google Calender (seangaming3690@gmail.com)
 # If modifying these scopes, delete the file token.json.
@@ -118,5 +118,4 @@ while True:
     # Close program
     elif "stop program" in text:
         print("Closing Program")
-        speak("Closing Program")
         os._exit(0) 
