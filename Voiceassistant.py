@@ -19,6 +19,7 @@ import pyaudio # Play's also audio files
 import webbrowser # Open Webbrowser Function
 
 import sys # Standart ding
+import pytz # Another Time Machine
 
 # Google Calender (seangaming3690@gmail.com)
 # If modifying these scopes, delete the file token.json.
