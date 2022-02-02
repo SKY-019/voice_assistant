@@ -36,7 +36,7 @@ def Calender_main():
         else:
             flow = InstalledAppFlow.from_client_secrets_file("credentials.json",SCOPES)
             creds = flow.run_local_server(port=0)
-        with open("token.json", "W") as token:
+        with open("token.json", "w") as token:
             token.write(creds.to_jason())
     
     try:
@@ -55,3 +55,10 @@ def Calender_main():
         
         for event in events:
             start = event["start"].get("dateTime", event["event"].get("date"))
+            print(start, event["summary"])
+            
+    except HttpError as error:
+        print("An error occurred: %s" % error)
+
+if __name__ == "__main__":
+    Calender_main()
